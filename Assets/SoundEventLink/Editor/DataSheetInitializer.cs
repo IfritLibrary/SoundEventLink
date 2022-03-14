@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using DataSheet.Editor;
 using Sirenix.OdinInspector.Editor;
@@ -14,7 +15,17 @@ namespace SoundEventLink.Editor
     {
         static DataSheetInitializer()
         {
-            
+            var path = Path.GetFullPath("Packages/jp.ifrit.soundeventlink/DataSheet");
+            if (Directory.Exists(path))
+            {
+                DataSheetManager.LoadDataSettingsDirectory(path);   
+            }
+
+            path = Path.Combine(Application.dataPath, "SoundEventLink/DataSheet");
+            if (Directory.Exists(path))
+            {
+                DataSheetManager.LoadDataSettingsDirectory(path);
+            }
         }
     }
 

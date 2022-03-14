@@ -1,14 +1,8 @@
 {
-  "name": "jp.harayuu9.soundeventlink",
+  "name": "jp.ifrit.soundeventlink",
   "version": "0.0.1",
   "unity": "2020.1",
   "description": "",
   "dependencies": {
-    "com.cysharp.mastermemory": "2.3.5",
-    "com.cysharp.unitask": "2.2.5",
-    "com.neuecc.messagepack": "2.3.74",
-    "com.unity.addressables": "1.19.4",
-    "jp.harayuu9.sosheet" : "0.0.1",
-    "jp.harayuu9.sosheetmm" : "0.0.1"
   }
 }
