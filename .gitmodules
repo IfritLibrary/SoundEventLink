@@ -1,0 +1,6 @@
+[submodule "Submodules/DataSheet"]
+	path = Submodules/DataSheet
+	url = https://github.com/IfritLibrary/DataSheet
+[submodule "Submodules/UniTask"]
+	path = Submodules/UniTask
+	url = https://github.com/Cysharp/UniTask

@@ -1,0 +1,35 @@
+{
+    "name": "SoundEventLink.Editor",
+    "rootNamespace": "",
+    "references": [
+        "UniTask",
+        "Unity.Addressables",
+        "Unity.Addressables.Editor",
+        "Unity.ResourceManager",
+        "MasterMemory",
+        "SoundEventLink",
+        "SoundEventLink.MasterData",
+        "SoundEventLink.NodeGraphProcessor",
+        "SoundEventLink.NodeGraphProcessor.Editor",
+        "ScriptableObjectSheet.Editor",
+        "SOSheetMasterMemory.Editor",
+        "SOSheetMasterMemory.Generated"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "jp.harayuu9.sosheetmmgen",
+            "expression": "",
+            "define": "SOSHEETMM_GENERATED"
+        }
+    ],
+    "noEngineReferences": false
+}
