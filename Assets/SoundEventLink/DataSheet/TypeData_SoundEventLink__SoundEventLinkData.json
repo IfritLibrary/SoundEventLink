@@ -4,7 +4,7 @@
   "IsScriptableObject": true,
   "IsCreateDBColumn": true,
   "AssetGroupName": "SoundEventLinkData",
-  "MenuItemPath": "Tool/SoundEventLink",
+  "MenuItemPath": "Tools/SoundEventLink",
   "Variables": [
     {
       "Name": "Type",

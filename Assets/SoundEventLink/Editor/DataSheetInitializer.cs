@@ -29,6 +29,7 @@ namespace SoundEventLink.Editor
         }
     }
 
+#if SOUNDEVENTLINK__SOUNDEVENTLINKDATA_GENERATED
     [CustomEditor(typeof(SoundEventLinkData))]
     public class SoundEventLinkDataCustomEditor : OdinEditor
     {
@@ -166,4 +167,5 @@ namespace SoundEventLink.Editor
             }
         }
     }
+#endif
 }
