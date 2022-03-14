@@ -1,0 +1,9 @@
+{
+  "name": "DataSheetGenerated",
+  "references": [
+    "DataSheet",
+    "DataSheet.Editor",
+    "UniTask",
+    "SoundEventLink.NodeGraphProcessor"
+  ]
+}

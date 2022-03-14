@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using GraphProcessor;
-using SoundEventLink.Runtime.Node;
 using SoundEventLink.Runtime.Node.Output;
 
 namespace SoundEventLink.Runtime

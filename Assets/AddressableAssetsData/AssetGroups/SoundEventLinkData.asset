@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: SoundEventLinkData
+  m_EditorClassIdentifier: 
+  m_GroupName: SoundEventLinkData
+  m_Data:
+    m_SerializedData: []
+  m_GUID: cea84c2682443174d94505983c6c3cf5
+  m_SerializeEntries:
+  - m_GUID: 8de9c71a3aa841f4bb3fef9b707af0f1
+    m_Address: SoundEventLinkData/Sample1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 084569ae16ed98a4cb830fad8afda941, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b25aa07b1f8f09848b657bb513cb259a, type: 2}
+    - {fileID: 11400000, guid: 82ceab77e896c614fb96792733263e09, type: 2}

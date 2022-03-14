@@ -2,17 +2,13 @@
     "name": "SoundEventLink",
     "rootNamespace": "",
     "references": [
-        "MessagePack",
-        "MessagePack.Annotations",
-        "MasterMemory",
-        "SoundEventLink.MasterData",
         "SoundEventLink.NodeGraphProcessor",
         "UniTask",
         "UniTask.Addressables",
         "Unity.Addressables",
         "Unity.ResourceManager",
-        "SOSheetMasterMemory.Runtime",
-        "SOSheetMasterMemory.Generated"
+        "DataSheet",
+        "DataSheetGenerated"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -6,14 +6,12 @@
         "Unity.Addressables",
         "Unity.Addressables.Editor",
         "Unity.ResourceManager",
-        "MasterMemory",
         "SoundEventLink",
         "SoundEventLink.MasterData",
         "SoundEventLink.NodeGraphProcessor",
         "SoundEventLink.NodeGraphProcessor.Editor",
-        "ScriptableObjectSheet.Editor",
-        "SOSheetMasterMemory.Editor",
-        "SOSheetMasterMemory.Generated"
+        "DataSheet.Editor",
+        "DataSheetGenerated"
     ],
     "includePlatforms": [
         "Editor"

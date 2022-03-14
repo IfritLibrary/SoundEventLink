@@ -1,0 +1,20 @@
+{
+  "Name": "SoundEventLinkType",
+  "ClassName": "SoundEventLink__SoundEventLinkType",
+  "ConfigFilePath": "EnumData_SoundEventLink__SoundEventLinkType.json",
+  "ScriptFilePath": "SoundEventLink\\SoundEventLinkType.cs",
+  "SingleDataArray": [
+    {
+      "Name": "None",
+      "Label": "なし"
+    },
+    {
+      "Name": "Reference",
+      "Label": "参照"
+    },
+    {
+      "Name": "Original",
+      "Label": "オリジナル"
+    }
+  ]
+}

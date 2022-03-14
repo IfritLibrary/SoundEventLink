@@ -1,0 +1,198 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68b613466fc7495fb7a3e6d19619fe36, type: 3}
+  m_Name: SE
+  m_EditorClassIdentifier: 
+  edges:
+  - GUID: a42de32f-90ab-4b21-a81d-6b595e3b8394
+    inputFieldName: _audioClip
+    inputNodeGUID: 977d6f32-081a-478c-bff0-65579c030692
+    inputPortIdentifier: 
+    outputFieldName: output
+    outputNodeGUID: 2ecc4e24-8809-481f-8d09-b037a6d1401c
+    outputPortIdentifier: output
+    owner: {fileID: 11400000}
+  - GUID: 6175c693-442b-4324-8952-3c78c8d62b12
+    inputFieldName: _volume
+    inputNodeGUID: 977d6f32-081a-478c-bff0-65579c030692
+    inputPortIdentifier: 
+    outputFieldName: output
+    outputNodeGUID: 8f2f1a00-6c50-4d5b-a494-c7958e24a234
+    outputPortIdentifier: output
+    owner: {fileID: 11400000}
+  - GUID: 2d563864-ccda-4a23-96a8-423fdc7792f9
+    inputFieldName: _audioMixerGroup
+    inputNodeGUID: 977d6f32-081a-478c-bff0-65579c030692
+    inputPortIdentifier: 
+    outputFieldName: output
+    outputNodeGUID: fe0edb4c-f600-4ae6-bfe8-4a078f04bf37
+    outputPortIdentifier: output
+    owner: {fileID: 11400000}
+  exposedParameters:
+  - rid: 5546669251457449993
+  - rid: 5546669251457449999
+  - rid: 5546669251457450005
+  groups: []
+  nodes:
+  - rid: 5546669251457449988
+  - rid: 5546669251457450011
+  - rid: 5546669251457450013
+  - rid: 5546669251457450014
+  pinnedElements:
+  - editorType:
+      serializedType: GraphProcessor.ExposedParameterView, SoundEventLink.NodeGraphProcessor.Editor,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    opened: 1
+    position:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 150
+      height: 200
+  position: {x: 3276, y: 504, z: 0}
+  scale: {x: 1, y: 1, z: 1}
+  serializedNodes: []
+  serializedParameterList: []
+  stackNodes: []
+  stickyNotes: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 5546669251457449988
+      type: {class: SEResultNode, ns: SoundEventLink.Runtime.Node.Output, asm: SoundEventLink}
+      data:
+        computeOrder: 3
+        debug: 0
+        expanded: 0
+        GUID: 977d6f32-081a-478c-bff0-65579c030692
+        nodeLock: 0
+        position:
+          serializedVersion: 2
+          x: -2306.6804
+          y: -141.5141
+          width: 100
+          height: 100
+        _audioClip: {fileID: 0}
+        _audioMixerGroup: {fileID: 0}
+        _delay: 0
+        _volume: 1
+    - rid: 5546669251457449993
+      type: {class: AudioClipParameter, ns: SoundEventLink.Runtime, asm: SoundEventLink}
+      data:
+        guid: 4164f14f-b391-49de-984e-4d5bbe8e2ca0
+        input: 1
+        name: Clip
+        serializedValue:
+          serializedName: 
+          serializedType: 
+          serializedValue: 
+        settings:
+          rid: 5546669251457449994
+        type: 
+        val: {fileID: 0}
+    - rid: 5546669251457449994
+      type: {class: ExposedParameter/Settings, ns: GraphProcessor, asm: SoundEventLink.NodeGraphProcessor}
+      data:
+        expanded: 0
+        guid: 4164f14f-b391-49de-984e-4d5bbe8e2ca0
+        isHidden: 0
+    - rid: 5546669251457449999
+      type: {class: AudioMixerParameter, ns: SoundEventLink.Runtime, asm: SoundEventLink}
+      data:
+        guid: 05a6e438-6d2f-450b-9c9c-2436c41fc42f
+        input: 1
+        name: Mixer
+        serializedValue:
+          serializedName: 
+          serializedType: 
+          serializedValue: 
+        settings:
+          rid: 5546669251457450000
+        type: 
+        val: {fileID: 0}
+    - rid: 5546669251457450000
+      type: {class: ExposedParameter/Settings, ns: GraphProcessor, asm: SoundEventLink.NodeGraphProcessor}
+      data:
+        expanded: 0
+        guid: 05a6e438-6d2f-450b-9c9c-2436c41fc42f
+        isHidden: 0
+    - rid: 5546669251457450005
+      type: {class: FloatParameter, ns: GraphProcessor, asm: SoundEventLink.NodeGraphProcessor}
+      data:
+        guid: 8870981b-dcab-4a9a-8fe4-cd593408e3f0
+        input: 1
+        name: Volume
+        serializedValue:
+          serializedName: 
+          serializedType: 
+          serializedValue: 
+        settings:
+          rid: 5546669251457450006
+        type: 
+        val: 0
+    - rid: 5546669251457450006
+      type: {class: FloatParameter/FloatSettings, ns: GraphProcessor, asm: SoundEventLink.NodeGraphProcessor}
+      data:
+        expanded: 0
+        guid: 8870981b-dcab-4a9a-8fe4-cd593408e3f0
+        isHidden: 0
+        max: 1
+        min: 0
+        mode: 0
+    - rid: 5546669251457450011
+      type: {class: ParameterNode, ns: GraphProcessor, asm: SoundEventLink.NodeGraphProcessor}
+      data:
+        computeOrder: 2
+        debug: 0
+        expanded: 0
+        GUID: 2ecc4e24-8809-481f-8d09-b037a6d1401c
+        nodeLock: 0
+        position:
+          serializedVersion: 2
+          x: -2439
+          y: -120
+          width: 100
+          height: 100
+        accessor: 0
+        parameterGUID: 4164f14f-b391-49de-984e-4d5bbe8e2ca0
+    - rid: 5546669251457450013
+      type: {class: ParameterNode, ns: GraphProcessor, asm: SoundEventLink.NodeGraphProcessor}
+      data:
+        computeOrder: 0
+        debug: 0
+        expanded: 0
+        GUID: 8f2f1a00-6c50-4d5b-a494-c7958e24a234
+        nodeLock: 0
+        position:
+          serializedVersion: 2
+          x: -2497
+          y: -35
+          width: 100
+          height: 100
+        accessor: 0
+        parameterGUID: 8870981b-dcab-4a9a-8fe4-cd593408e3f0
+    - rid: 5546669251457450014
+      type: {class: ParameterNode, ns: GraphProcessor, asm: SoundEventLink.NodeGraphProcessor}
+      data:
+        computeOrder: 1
+        debug: 0
+        expanded: 0
+        GUID: fe0edb4c-f600-4ae6-bfe8-4a078f04bf37
+        nodeLock: 0
+        position:
+          serializedVersion: 2
+          x: -2497
+          y: -83
+          width: 67
+          height: 37
+        accessor: 0
+        parameterGUID: 05a6e438-6d2f-450b-9c9c-2436c41fc42f

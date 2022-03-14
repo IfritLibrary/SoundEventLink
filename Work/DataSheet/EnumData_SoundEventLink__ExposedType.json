@@ -1,0 +1,24 @@
+{
+  "Name": "ExposedType",
+  "ClassName": "SoundEventLink__ExposedType",
+  "ConfigFilePath": "EnumData_SoundEventLink__ExposedType.json",
+  "ScriptFilePath": "SoundEventLink\\ExposedType.cs",
+  "SingleDataArray": [
+    {
+      "Name": "Bool",
+      "Label": "Bool"
+    },
+    {
+      "Name": "Float",
+      "Label": "Float"
+    },
+    {
+      "Name": "String",
+      "Label": "String"
+    },
+    {
+      "Name": "Object",
+      "Label": "Object"
+    }
+  ]
+}

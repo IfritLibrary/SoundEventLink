@@ -1,0 +1,94 @@
+{
+  "ConfigFilePath": "TypeData_SoundEventLink__SoundEventLinkData.json",
+  "ScriptFilePath": "SoundEventLink\\SoundEventLinkData.cs",
+  "IsScriptableObject": true,
+  "IsCreateDBColumn": true,
+  "AssetGroupName": "SoundEventLinkData",
+  "MenuItemPath": "Tool/SoundEventLink",
+  "Variables": [
+    {
+      "Name": "Type",
+      "Type": "SoundEventLink.SoundEventLinkType",
+      "IsArray": false,
+      "Icon": false,
+      "Default": "",
+      "Label": "タイプ",
+      "ToolTip": "",
+      "CustomAttribute": ""
+    },
+    {
+      "Name": "Graph",
+      "Type": "SoundEventLink.NodeGraphProcessor.Runtime.Graph.SoundEventLinkGraph",
+      "IsArray": false,
+      "Icon": false,
+      "Default": "",
+      "Label": "グラフ",
+      "ToolTip": "",
+      "CustomAttribute": ""
+    },
+    {
+      "Name": "ExposedIndexList",
+      "Type": "SoundEventLink.ExposedType",
+      "IsArray": true,
+      "Icon": false,
+      "Default": "",
+      "Label": "indexList",
+      "ToolTip": "",
+      "CustomAttribute": ""
+    },
+    {
+      "Name": "ExposedBoolList",
+      "Type": "System.Boolean",
+      "IsArray": true,
+      "Icon": false,
+      "Default": "",
+      "Label": "bool",
+      "ToolTip": "",
+      "CustomAttribute": ""
+    },
+    {
+      "Name": "ExposedFloatList",
+      "Type": "System.Single",
+      "IsArray": true,
+      "Icon": false,
+      "Default": "",
+      "Label": "float",
+      "ToolTip": "",
+      "CustomAttribute": ""
+    },
+    {
+      "Name": "ExposedObjectList",
+      "Type": "UnityEngine.Object",
+      "IsArray": true,
+      "Icon": false,
+      "Default": "",
+      "Label": "object",
+      "ToolTip": "",
+      "CustomAttribute": ""
+    },
+    {
+      "Name": "ExposedStringList",
+      "Type": "System.String",
+      "IsArray": true,
+      "Icon": false,
+      "Default": "",
+      "Label": "string",
+      "ToolTip": "",
+      "CustomAttribute": ""
+    },
+    {
+      "Name": "Reference",
+      "Type": "SoundEventLink.SoundEventLinkData",
+      "IsArray": false,
+      "Icon": false,
+      "Default": "",
+      "Label": "reference",
+      "ToolTip": "",
+      "CustomAttribute": ""
+    }
+  ],
+  "CustomTableType": "",
+  "ClassName": "SoundEventLink__SoundEventLinkData",
+  "Name": "SoundEventLinkData",
+  "IsCreateDBAccessor": true
+}

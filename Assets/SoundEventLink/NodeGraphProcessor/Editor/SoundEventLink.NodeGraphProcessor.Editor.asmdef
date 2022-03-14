@@ -1,7 +1,8 @@
 {
     "name": "SoundEventLink.NodeGraphProcessor.Editor",
     "references": [
-        "GUID:e5dd1e2f8db6fd64396f420a7805f06a"
+        "SoundEventLink.NodeGraphProcessor",
+        "DataSheet.Editor"
     ],
     "includePlatforms": [
         "Editor"

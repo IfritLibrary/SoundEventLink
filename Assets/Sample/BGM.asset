@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68b613466fc7495fb7a3e6d19619fe36, type: 3}
+  m_Name: BGM
+  m_EditorClassIdentifier: 
+  edges:
+  - GUID: 2454f952-2139-44ff-86d9-9433ad11b79c
+    inputFieldName: _audioClip
+    inputNodeGUID: f988a491-b1fa-42ac-8ff4-a3676452129a
+    inputPortIdentifier: 
+    outputFieldName: output
+    outputNodeGUID: d27a0560-df5a-4303-a8a4-9629f58e9e9b
+    outputPortIdentifier: output
+    owner: {fileID: 11400000}
+  exposedParameters:
+  - rid: 0
+  groups: []
+  nodes:
+  - rid: 1
+  - rid: 2
+  pinnedElements:
+  - editorType:
+      serializedType: GraphProcessor.ExposedParameterView, SoundEventLink.NodeGraphProcessor.Editor,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    opened: 1
+    position:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 377
+      height: 452
+  position: {x: 1314, y: 376, z: 0}
+  scale: {x: 1, y: 1, z: 1}
+  serializedNodes: []
+  serializedParameterList: []
+  stackNodes: []
+  stickyNotes: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 0
+      type: {class: AudioClipParameter, ns: SoundEventLink.Runtime, asm: SoundEventLink}
+      data:
+        guid: ab584fb7-e841-462e-b36d-ce333d5bfc8e
+        input: 1
+        name: BGM
+        serializedValue:
+          serializedName: 
+          serializedType: 
+          serializedValue: 
+        settings:
+          rid: 3
+        type: 
+        val: {fileID: 8300000, guid: 74156c929119f5049b51196c8aed712d, type: 3}
+    - rid: 1
+      type: {class: BGMResultNode, ns: SoundEventLink.Runtime.Node.Output, asm: SoundEventLink}
+      data:
+        computeOrder: 1
+        debug: 0
+        expanded: 0
+        GUID: f988a491-b1fa-42ac-8ff4-a3676452129a
+        nodeLock: 0
+        position:
+          serializedVersion: 2
+          x: -574
+          y: -64
+          width: 106
+          height: 147
+        _audioClip: {fileID: 8300000, guid: 74156c929119f5049b51196c8aed712d, type: 3}
+        _audioMixerGroup: {fileID: 4927951699951863071, guid: 4f5166b662cb0de4cb86b39f53675739, type: 2}
+        _volume: 1
+        _fadeTime: 5
+    - rid: 2
+      type: {class: ParameterNode, ns: GraphProcessor, asm: SoundEventLink.NodeGraphProcessor}
+      data:
+        computeOrder: 0
+        debug: 0
+        expanded: 0
+        GUID: d27a0560-df5a-4303-a8a4-9629f58e9e9b
+        nodeLock: 0
+        position:
+          serializedVersion: 2
+          x: -718
+          y: -38
+          width: 100
+          height: 100
+        accessor: 0
+        parameterGUID: ab584fb7-e841-462e-b36d-ce333d5bfc8e
+    - rid: 3
+      type: {class: ExposedParameter/Settings, ns: GraphProcessor, asm: SoundEventLink.NodeGraphProcessor}
+      data:
+        expanded: 0
+        guid: ab584fb7-e841-462e-b36d-ce333d5bfc8e
+        isHidden: 0

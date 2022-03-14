@@ -1,8 +1,0 @@
-﻿{
-  "name": "SoundEventLink.MasterData",
-  "references": [
-    "MessagePack",
-    "MessagePack.Annotations",
-    "MasterMemory"
-  ]
-}
