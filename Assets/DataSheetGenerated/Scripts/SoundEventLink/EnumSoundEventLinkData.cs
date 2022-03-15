@@ -5,5 +5,6 @@
 namespace SoundEventLink{
 public enum EnumSoundEventLinkData{
     Sample1 = -2023265157,
+    SE1 = 1596708327,
 }
 }

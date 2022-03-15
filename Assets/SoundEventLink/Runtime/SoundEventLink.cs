@@ -16,7 +16,7 @@ namespace SoundEventLink.Runtime
         private readonly Dictionary<string, IDisposable> _addressableCache = new();
 
         // Ducking用データ
-        private AudioMixer _audioMixer;
+        private AddressableResource<AudioMixer> _audioMixer;
         internal DuckingController DuckingController;
         internal ObjectPool<AudioSource> Pool;
 
@@ -32,6 +32,9 @@ namespace SoundEventLink.Runtime
                 source => source.gameObject.SetActive(false),
                 source => Destroy(source.gameObject),
                 true, 10, 512);
+            
+            _audioMixer = AddressableResource<AudioMixer>.Load("SoundEventLinkData/AudioMixer");
+            DuckingController = new DuckingController(_audioMixer?.Value);
         }
 
         public void Update()
@@ -41,7 +44,7 @@ namespace SoundEventLink.Runtime
 
         private void OnDestroy()
         {
-            Addressables.Release(_audioMixer);
+            _audioMixer?.Dispose();
             ClearCache();
         }
 
@@ -50,14 +53,7 @@ namespace SoundEventLink.Runtime
         {
             var obj = new GameObject(nameof(SoundEventLink));
             Instance = obj.AddComponent<SoundEventLink>();
-            Instance.SetMixer(Addressables.LoadAssetAsync<AudioMixer>("SoundEventLinkData/AudioMixer").WaitForCompletion());
             DontDestroyOnLoad(obj);
-        }
-
-        private void SetMixer(AudioMixer mixer)
-        {
-            _audioMixer = mixer;
-            DuckingController = new DuckingController(mixer);
         }
 
         public void ClearCache()
@@ -67,22 +63,29 @@ namespace SoundEventLink.Runtime
             _addressableCache.Clear();
         }
 
+        private async UniTask<SoundEventLinkData> GetData(string eventKey)
+        {
+#if SOUNDEVENTLINK__SOUNDEVENTLINKDATA_GENERATED
+            if (_addressableCache.TryGetValue(eventKey, out var find))
+            {
+                return (find as AddressableResource<SoundEventLinkData>)?.Value;
+            }
+
+            var accessor = await SoundEventLinkDataAccessor.GetAsync(eventKey);
+            _addressableCache.Add(eventKey, accessor);
+            return accessor.Value;
+#else
+            return null;
+#endif
+        }
+#if SOUNDEVENTLINK__SOUNDEVENTLINKDATA_GENERATED
+        public UniTask Play(EnumSoundEventLinkData eventKey, Vector3 position, params object[] customProperty) => Play(eventKey.ToString(), position, customProperty);
+#endif
+
         public async UniTask Play(string eventKey, Vector3 position, params object[] customProperty)
         {
 #if SOUNDEVENTLINK__SOUNDEVENTLINKDATA_GENERATED
-            SoundEventLinkData result;
-            if (_addressableCache.TryGetValue(eventKey, out var find))
-            {
-                result = (find as AddressableResource<SoundEventLinkData>)?.Value;
-                if (result == null)
-                    return;
-            }
-            else
-            {
-                var accessor = await SoundEventLinkDataAccessor.GetAsync(name);
-                _addressableCache.Add(eventKey, accessor);
-                result = accessor.Value;
-            }
+            var result = await GetData(eventKey);
 
             // Graphデータがない場合は再生しない
             if (result.Graph == null)
@@ -131,6 +134,8 @@ namespace SoundEventLink.Runtime
             await UniTask.WhenAll(processor.SEResultList
                 .Where(res => res._audioClip != null)
                 .Select(res => PlaySE(eventKey, position, res, processor.DuckingNodeList)));
+#else
+            await UniTask.Yield();
 #endif
         }
 

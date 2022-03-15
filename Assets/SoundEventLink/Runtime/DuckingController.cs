@@ -24,6 +24,9 @@ namespace SoundEventLink.Runtime
 		/// </summary>
 		public void Update()
 		{
+			if (_mixer == null)
+				return;
+			
 			var time = Time.time;
 			foreach (var pair in _dataList)
 			{
@@ -122,6 +125,9 @@ namespace SoundEventLink.Runtime
 
 		public void AddData(DuckingNode duckingNode, PlayAudioData audioData)
 		{
+			if (_mixer == null)
+				return;
+			
 			_audioDataToParameter.Add(audioData, duckingNode._audioParameter);
 
 			if (_dataList.ContainsKey(duckingNode._audioParameter))
@@ -170,6 +176,9 @@ namespace SoundEventLink.Runtime
 
 		public void StopAudio(PlayAudioData data)
 		{
+			if (_mixer == null)
+				return;
+			
 			if (!_audioDataToParameter.ContainsKey(data))
 				return;
 			var audioParameter = _audioDataToParameter[data];
@@ -181,10 +190,7 @@ namespace SoundEventLink.Runtime
 
 		private class DataComparer : IComparer<Data>
 		{
-			public int Compare(Data x, Data y)
-			{
-				return x.Node._priority - y.Node._priority;
-			}
+			public int Compare(Data x, Data y) => x.Node._priority - y.Node._priority;
 		}
 		private class Data
 		{

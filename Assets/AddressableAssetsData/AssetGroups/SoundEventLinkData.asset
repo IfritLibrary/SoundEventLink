@@ -21,6 +21,10 @@ MonoBehaviour:
     m_Address: SoundEventLinkData/Sample1
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 3071d6bbe0c221c4c9d7fb6a768a36bb
+    m_Address: SoundEventLinkData/SE1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 084569ae16ed98a4cb830fad8afda941, type: 2}
   m_SchemaSet:

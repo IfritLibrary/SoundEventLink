@@ -68,7 +68,7 @@ namespace SoundEventLink
         }
         public static global::Cysharp.Threading.Tasks.UniTask<global::DataSheet.AddressableResource<SoundEventLinkData>> GetAsync(string name)
         {
-            return global::DataSheet.AddressableResource<SoundEventLinkData>.Load($"SoundEventLinkData/{name}");
+            return global::DataSheet.AddressableResource<SoundEventLinkData>.LoadAsync($"SoundEventLinkData/{name}");
         }
     }
 }
@@ -104,7 +104,7 @@ namespace SoundEventLink.GeneratedEditor
     }
     public class SoundEventLinkDataWindow : OdinMenuEditorWindow
     {
-        [MenuItem("Tool/SoundEventLink")]
+        [MenuItem("Tools/SoundEventLink")]
         public static void ShowWindow() => GetWindow<SoundEventLinkDataWindow>(nameof(SoundEventLinkDataWindow)).Show();
         protected override OdinMenuTree BuildMenuTree()
         {

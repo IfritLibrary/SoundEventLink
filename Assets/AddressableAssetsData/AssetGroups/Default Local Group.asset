@@ -16,7 +16,11 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 8299a51679a11d54395a2037a90a9e68
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 4f5166b662cb0de4cb86b39f53675739
+    m_Address: SoundEventLinkData/AudioMixer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 084569ae16ed98a4cb830fad8afda941, type: 2}
   m_SchemaSet:
